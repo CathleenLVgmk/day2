@@ -1,0 +1,129 @@
+@import "_mixin.scss";
+@import "common.scss";
+* {
+    @include sizing;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    @include box_flex;
+    @include direction(column);
+    background: #e9e7e7;
+}
+
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    @include box_flex;
+    @include justify(space-between);
+    @include align;
+    padding: 0 pxTorem(15px);
+    span {
+        font-size: pxTorem(14px)!important;
+    }
+    .h_r {
+        width: pxTorem(45px);
+        @include box_flex;
+        @include justify(space-between);
+        @include align;
+        .blue {
+            background: blue;
+            color: #fff;
+            padding: pxTorem(4px);
+            border-radius: 100%;
+        }
+    }
+}
+
+section {
+    width: 100%;
+    @include flex;
+    .tabs {
+        width: 100%;
+        height: 100%;
+        padding: pxTorem(20px);
+        @include box_flex;
+        @include direction(column);
+        .title {
+            width: 100%;
+            height: pxTorem(90px);
+            @include box_flex;
+            @include justify(space-between);
+            li {
+                width: 22%;
+                // @include flex;
+                @include box_flex;
+                @include direction(column);
+                @include justify(space-between);
+                @include align;
+                .iconbox {
+                    width: pxTorem(60px);
+                    height: pxTorem(60px);
+                    border: solid pxTorem(1px) #ccc;
+                    text-align: center;
+                    line-height: pxTorem(60px);
+                    border-radius: 100%;
+                    span {
+                        font-size: pxTorem(25px);
+                    }
+                }
+            }
+            li.active {
+                .iconbox {
+                    span {
+                        color: red;
+                    }
+                }
+            }
+        }
+        .conts {
+            width: 100%;
+            @include flex;
+            overflow: hidden;
+            li {
+                widows: 100%;
+                height: 100%;
+                @include box_flex;
+                @include align;
+                @include justify(center);
+                .dis {
+                    width: 100%;
+                    height: pxTorem(40px);
+                    p {
+                        width: 100%;
+                        height: pxTorem(20px);
+                        text-align: center;
+                        color: #ccc;
+                    }
+                }
+            }
+        }
+        .foot {
+            width: 100%;
+            height: pxTorem(35px);
+            @include box_flex;
+            @include justify(space-between);
+            @include align;
+            padding: 0 pxTorem(20px);
+            span:first-child {
+                font-size: pxTorem(18px)!important;
+                padding: pxTorem(5px);
+                border: solid pxTorem(1px) #ccc;
+                border-radius: 100%;
+                color: #ccc;
+            }
+            span:nth-child(2) {
+                width: pxTorem(140px);
+                height: pxTorem(30px);
+                text-align: center;
+                line-height: pxTorem(30px);
+                border-radius: pxTorem(20px);
+                border: solid pxTorem(1px) #ccc;
+                font-size: pxTorem(18px);
+                color: #ccc;
+            }
+        }
+    }
+}
